@@ -6,7 +6,6 @@
 
     <application
         android:label="Oran Analiz Pro"
-        android:theme="@android:style/Theme.NoTitleBar"
         android:usesCleartextTraffic="true">
 
         <activity
