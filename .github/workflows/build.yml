@@ -23,6 +23,10 @@ jobs:
         with:
           gradle-version: '8.4'
 
+      - name: Manifest Duzelt
+        run: |
+          printf '<?xml version="1.0" encoding="utf-8"?>\n<manifest xmlns:android="http://android.com">\n    <uses-permission android:name="android.permission.INTERNET" />\n    <application android:label="Oran Analiz Pro" android:usesCleartextTraffic="true">\n        <activity android:name=".MainActivity" android:exported="true">\n            <intent-filter>\n                <action android:name="android.intent.action.MAIN" />\n                <category android:name="android.intent.category.LAUNCHER" />\n            </intent-filter>\n        </activity>\n    </application>\n</manifest>\n' > app/src/main/AndroidManifest.xml
+
       - name: APK Derle
         run: gradle assembleDebug
 
